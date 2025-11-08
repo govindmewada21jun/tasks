@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee Feedback Form</title>
+<style>
+  body {
+    font-family: Arial;
+    background:#f2f2f2;
+    text-align:center;
+  }
+  form {
+    background:#fff;
+    padding:20px;
+    width:300px;
+    margin:50px auto;
+    border-radius:10px;
+    text-align:left;
+  }
+  label {
+    font-weight:bold;
+  }
+  input, select, textarea {
+    width:100%;
+    padding:6px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+  }
+  button {
+    width:100%;
+    background:#17a2b8;
+    color:#fff;
+    padding:8px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+  }
+  button:hover {
+    background:#138496;
+  }
+</style>
+
+<script>
+  function submitForm(event) {
+    event.preventDefault(); // Prevent form refresh
+    alert("Your feedback is submitted!");
+  }
+</script>
+</head>
+
+<body>
+
+<h2>Employee Feedback Form</h2>
+<form onsubmit="submitForm(event)">
+  <label>Name:</label>
+  <input type="text" required>
+
+  <label>Email:</label>
+  <input type="email" required>
+
+  <label>Department:</label>
+  <input type="text">
+
+  <label>Role/Position:</label>
+  <input type="text">
+
+  <label>Overall Experience:</label>
+  <select>
+    <option>Excellent</option>
+    <option>Good</option>
+    <option>Average</option>
+    <option>Poor</option>
+  </select>
+
+  <label>Feedback:</label>
+  <textarea></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
