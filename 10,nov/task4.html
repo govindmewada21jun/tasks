@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    background: rgb(118, 138, 147);
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 80px auto;
+    gap: 5px;
+    height: 80vh;
+    padding: 5px;
+  }
+  .header {
+    grid-column: 1 / span 2;
+    display: flex;
+    gap: 5px;
+  }
+  .header div {
+    flex: 1;
+    background: rgb(171, 102, 102);
+  }
+  .main {
+    background: rgb(112, 123, 107);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main div {
+    width: 100px;
+    height: 100px;
+    background: rgb(239, 239, 5);
+  }
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .sidebar div {
+    flex: 1;
+    background: rgb(162, 157, 95);
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div></div><div></div><div></div>
+    </div>
+    <div class="main">
+      <div></div>
+    </div>
+    <div class="sidebar">
+      <div></div><div></div><div></div><div></div><div></div>
+    </div>
+  </div>
+</body>
+</html>
