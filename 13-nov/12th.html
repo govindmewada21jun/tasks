@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Structure.html</title>
+</head>
+<body>
+    <h1>Arithmetic Operators</h1>
+    
+    <button onclick="add()">Addition</button>
+    <button onclick="subtract()">Subtraction</button>
+    <button onclick="multiply()">Multiplication</button>
+    <button onclick="divide()">Division</button>
+
+    <h3 id="result">Result will appear here.</h3> 
+
+    <script>
+        // These are the variables used in the original image.
+        let a = 30;
+        let b = 10;
+        
+        // --- Addition Function ---
+        function add() {
+            let sum = a + b;
+            document.getElementById("result").innerHTML = "Addition: " + sum;
+        }
+
+        // --- Subtraction Function ---
+        function subtract() {
+            let difference = a - b;
+            document.getElementById("result").innerHTML = "Subtraction: " + difference;
+        }
+
+        // --- Multiplication Function ---
+        function multiply() {
+            let product = a * b;
+            document.getElementById("result").innerHTML = "Multiplication: " + product;
+        }
+
+        // --- Division Function ---
+        function divide() {
+            let quotient = a / b;
+            // You might want to add a check for division by zero (if b === 0)
+            document.getElementById("result").innerHTML = "Division: " + quotient;
+        }
+    </script>
+</body>
+</html>
