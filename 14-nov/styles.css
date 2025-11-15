@@ -1,0 +1,101 @@
+/* CSS for Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Background gradient similar to the image */
+    background: linear-gradient(to right, #f0e68c, #eedd82, #dda0dd, #800080);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Form Container Styling */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    margin-bottom: 50px;
+}
+
+/* Form Row Styling */
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-row input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Submit Button Styling */
+button {
+    background-color: #4169e1; /* Royal Blue, similar to the image */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 100%; /* Make button full width of the container */
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #3150b6;
+}
+
+/* Table Styling */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    width: 500px; /* Adjust width as needed */
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Placeholder for the validation tooltip shown in the image */
+input:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: red;
+}
