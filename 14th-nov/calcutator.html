@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator">
+
+    <div class="previous">Previous Answer: <span id="prev">0</span></div>
+
+    <input type="text" id="display" value="0" disabled>
+
+    <button class="clear-btn" onclick="clearEntry()">CLEAR ENTRY</button>
+
+    <div class="main-section">
+
+        <!-- Number Pad -->
+        <div class="keys">
+            <button onclick="press('0')">0</button>
+            <button onclick="press('1')">1</button>
+            <button onclick="press('2')">2</button>
+            <button onclick="press('3')">3</button>
+
+            <button onclick="press('4')">4</button>
+            <button onclick="press('5')">5</button>
+            <button onclick="press('6')">6</button>
+            <button onclick="press('7')">7</button>
+
+            <button onclick="press('8')">8</button>
+            <button onclick="press('9')">9</button>
+            <button onclick="press('.')">.</button>
+            <button class="equal" onclick="calculate()">=</button>
+        </div>
+
+        <!-- Operators -->
+        <div class="operators">
+            <button onclick="press('+')">+</button>
+            <button onclick="press('-')">-</button>
+            <button onclick="press('*')">×</button>
+            <button onclick="press('/')">÷</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

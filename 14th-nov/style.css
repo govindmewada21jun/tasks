@@ -1,98 +1,98 @@
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    background: white;
+}
+
+.calculator {
+    background: white;
     padding: 20px;
-    color: #333;
+    border-radius: 15px;
+    width: 360px;
+    box-shadow: 0 0 8px rgb(176, 176, 176);
 }
 
-h1, h2 {
-    color: #2c3e50;
-    text-align: center;
+.previous {
+    font-size: 14px;
+    color: rgb(108, 106, 106);
+    text-align: right;
+    margin-bottom: 5px;
 }
 
-.box-model-container {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
-}
-
-.box-model-example {
-    background-color: #f1c40f;
-    margin: 20px;
-    border: 5px solid #e67e22;
-    padding: 30px;
-    width: 200px;
-    height: 200px;
-    position: relative;
-}
-
-.content {
-    background-color:brown;
-    color: white;
+/* DISPLAY FIX */
+#display {
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
+    height: 70px;
+    font-size: 36px;
+    text-align: right;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.clear-btn {
+    width: 100%;
+    padding: 15px;
+    background: #ff9f1c;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 15px;
     font-weight: bold;
 }
 
-.controls {
-    background-color: #ecf0f1;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 30px;
-}
-
-.control-group {
-    margin-bottom: 15px;
-}
-
-.control-group label {
-    display: inline-block;
-    width: 80px;
-}
-
-input[type="range"] {
-    width: 200px;
-    vertical-align: middle;
-}
-
-.box-model-explanation {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.component {
+/* Numbers + Operators layout side by side */
+.main-section {
     display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
 }
 
-.color-box {
-    width: 30px;
-    height: 30px;
-    margin-right: 15px;
-    border: 1px solid #ccc;
+/* Number Pad */
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    background: #d8e8ff;
+    padding: 15px;
+    border-radius: 12px;
+    flex: 1;
 }
 
-.margin {
-    background-color: transparent;
-    border: 2px dashed #7f8c8d;
+.keys button {
+    background: #4da3ff;
+    border: none;
+    height: 55px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
 }
 
-.border {
-    background-color: #e67e22;
+.equal {
+    background: #8b5cf6;
 }
 
-.padding {
-    background-color: #f1c40f;
+/* Operators section */
+.operators {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.content-color {
-    background-color:red;
+.operators button {
+    background: #99d98c;
+    border: none;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: bold;
 }
