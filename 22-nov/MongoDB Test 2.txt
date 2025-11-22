@@ -1,0 +1,54 @@
+
+
+8. For the product named "Ultimate Laptop Pro," decrement ($inc) the stock quantity by 1 and set ($set) its details.brand to "TechCo Elite".
+
+Ans:-db.products.updateOne(
+  { name: "Ultimate Laptop Pro" },
+  {
+    $inc: { stock: -1 },
+    $set: { "details.brand": "TechCo Elite" }
+  }
+)
+
+
+9. Add the tag "Sale" to the tags array of the product "Adventure Backpack" only if it's not already present
+
+Ans:- db.products.updateOne(
+  { name: "Adventure Backpack" },
+  { $addToSet: { tags: "Sale" } }
+)
+
+
+10. Remove ($pull) all instances of the tag "Sale" from the tags array for ALL documents in the collection.
+
+Ans:- db.products.updateMany(
+  {},
+  { $pull: { tags: "Sale" } }
+)
+
+
+11. Calculate the total inventory value (sum of price * stock) for each category. (Hint: use $group, $sum, and $multiply).
+
+Ans:-db.products.aggregate([
+  {
+    $group: {
+      _id: "$category",
+      totalInventoryValue: {
+        $sum: { $multiply: ["$price", "$stock"] }
+      }
+    }
+  }
+])
+
+12. Count the total number of products supplied by each details.brand
+
+Ans:- db.products.aggregate([
+  {
+    $group: {
+      _id: "$details.brand",
+      totalProducts: { $sum: 1 }
+    }
+  }
+])
+
+
